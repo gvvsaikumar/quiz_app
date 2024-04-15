@@ -1,0 +1,12 @@
+GET http://localhost:5400/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2Fpa3VtYXIiLCJpYXQiOjE3MTIzMjM3ODl9.vwdNjlApMUBckkyQKTrRJtbgQt0WIW9kD2_2BQ4QcDM
+
+
+###
+
+POST http://localhost:5400/loginup
+Content-Type: application/json
+
+{
+    "username": "saikumar"
+}

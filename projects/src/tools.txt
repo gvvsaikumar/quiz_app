@@ -1,0 +1,20 @@
+//**Requirements packages**//
+npm init -y
+npm install --save-dev typescript ts-node
+tsc --init
+npm i typescript
+npm i ts-node
+npm i express
+npm i nodemon 
+npm i dotenv
+npm install --save @types/express
+npm i mongoose
+npm install mongoose dotenv
+//sessions unique id:  
+npm i uuid
+npm i --save-dev @types/uuid
+//cors:
+npm i cors
+npm i --save-dev @types/cors
+//nodemon installed in globally
+npm install -g nodemon

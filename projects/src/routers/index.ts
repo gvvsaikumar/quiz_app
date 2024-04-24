@@ -4,7 +4,8 @@ import cors from 'cors';
 import corsRoute from './corsproject';
 import authRoute from './simpleauth';
 import fileRoute from './multerfile';
-
+import oauth2_0 from './Oauth2_O/oauth2_0-main';
+import passport from 'passport';
 
 const port='5000'
 const app=express();
@@ -25,7 +26,8 @@ app.use("/",mongoRoute);
 app.use("/",corsRoute);
 app.use("/",authRoute);
 app.use("/",fileRoute);
-
+app.use("/",oauth2_0);
+app.use(passport.initialize());
  
 
 

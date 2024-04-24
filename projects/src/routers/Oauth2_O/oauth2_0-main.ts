@@ -22,4 +22,17 @@ router.get("/google/callback",
 router.get("/protected",(req,res)=>{
   res.send("this is protected area")
 })
+router.get("/logout", (req, res) => {
+  // Destroy the user's session
+  req.session.destroy((err) => {
+    // If an error occurred during session destruction
+    if (err) {
+      // Send the error as a response
+      res.send(err);
+    } else {
+      // If session destruction was successful, send a success message
+      res.send("logout successfully");
+    }
+  });
+});
 export default router;

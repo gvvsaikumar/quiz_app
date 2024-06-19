@@ -6,9 +6,12 @@ import authRoute from './simpleauth';
 import fileRoute from './multerfile';
 import oauth2_0 from './Oauth2_O/oauth2_0-main';
 import passport from 'passport';
+import postgresql from "./postgesql/upload"
+import bodyParser from 'body-parser'
 
 const port='5000'
 const app=express();
+app.use(bodyParser.json());
 app.use(
   cors({
   origin:"*",
@@ -28,6 +31,7 @@ app.use("/",authRoute);
 app.use("/",fileRoute);
 app.use("/",oauth2_0);
 app.use(passport.initialize());
+app.use("/",postgresql);
  
 
 
